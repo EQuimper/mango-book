@@ -26,5 +26,7 @@ defmodule MangoWeb.Router do
     post "/login", SessionController, :create
     get "/logout", SessionController, :delete
     post "/cart", CartController, :add
+    get "/cart", CartController, :show
+    put "/cart", CartController, :update
   end
 end
