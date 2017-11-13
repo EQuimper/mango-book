@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <%= inputs_for f, :line_items, fn lf -> %> 
+      <%= inputs_for f, :line_items, fn lf -> %>
       <tr>
         <td><%= lf.data.product_name %></td>
         <td><%= lf.data.pack_size %></td>
@@ -40,4 +40,5 @@
     <%= submit "Update Cart", class: "btn btn-primary" %>
   </div>
   <% end %>
+  <%= link "Checkout", to: checkout_path(@conn, :edit), class: "btn btn-primary pull-right" %>
 <% end %>
