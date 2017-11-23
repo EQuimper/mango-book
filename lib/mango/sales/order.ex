@@ -6,6 +6,11 @@ defmodule Mango.Sales.Order do
   schema "orders" do
     field :status, :string
     field :total, :decimal
+    field :comments, :string
+    field :customer_id, :integer
+    field :customer_name, :string
+    field :email, :string
+    field :residence_area, :string
 
     embeds_many :line_items, LineItem, on_replace: :delete
 

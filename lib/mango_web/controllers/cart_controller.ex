@@ -1,6 +1,5 @@
 defmodule MangoWeb.CartController do
   use MangoWeb, :controller
-
   alias Mango.Sales
 
   def add(conn, %{"cart" => cart_params}) do
